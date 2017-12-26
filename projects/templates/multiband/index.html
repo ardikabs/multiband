@@ -1,0 +1,142 @@
+{% extends 'multiband/base.html' %} {% block content %}
+
+<main class="ui container">
+    
+    <div class="ui segment">
+        <h2 class="ui dividing header">Landsat 7</h3>
+        
+        <div class="ui centered cards">
+            <div class="ui card">
+                <div class="image">
+                    <img class="image landscape" src="{{ url_for('static', filename='img/landsat7/gb1.jpg') }}" width="64px" height="64px" />
+                </div>
+                <div class="content">
+                    <div class="header">Bind 1</div>
+                </div>
+            </div>
+            <div class="ui card">
+                <div class="image">
+                    <img class="image landscape" src="{{ url_for('static', filename='img/landsat7/gb2.jpg') }}"/>
+                </div>
+                <div class="content">
+                    <div class="header">Bind 2</div>
+                </div>
+            </div>
+            <div class="ui card">
+                <div class="image">
+                    <img class="image landscape" src="{{ url_for('static', filename='img/landsat7/gb3.jpg') }}"/>
+                </div>
+                <div class="content">
+                    <div class="header">Bind 3</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui centered cards">
+            <div class="ui card">
+                <div class="image">
+                    <img class="image landscape" src="{{ url_for('static', filename='img/landsat7/gb4.jpg') }}" />
+                </div>
+                <div class="content">
+                    <div class="header">Bind 4</div>
+                </div>
+            </div>
+            <div class="ui card">
+                <div class="image">
+                    <img class="image landscape" src="{{ url_for('static', filename='img/landsat7/gb5.jpg') }}" />
+                </div>
+                <div class="content">
+                    <div class="header">Bind 5</div>
+                </div>
+            </div>
+            <div class="ui card">
+                <div class="image">
+                    <img class="image landscape" src="{{ url_for('static', filename='img/landsat7/gb7.jpg') }}" />
+                </div>
+                <div class="content">
+                    <div class="header">Bind 7</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="ui container">
+        <table class="ui fixed table">
+            <thead>
+                <tr>
+                <th><h2>Algoritma</h2></th>
+                <th><h2>Cluster</h2></th>
+                <th><h2>Hasil</h2></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><h3>KMeans</h3></td>
+                    <td><h3>3</h3></td>
+                    <td>
+                        <img class="ui small image" src="{{url_for('static',filename='img/landsat7/result-cluster-3.jpg')}}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3>KMeans</h3></td>
+                    <td><h3>6</h3></td>
+                    <td>
+                        <img class="ui small image" src="{{url_for('static',filename='img/landsat7/result-cluster-kmeans-6.jpg')}}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3>Average Linkage</h3></td>
+                    <td><h3>6</h3></td>
+                    <td>
+                        <img class="ui small image" src="{{url_for('static',filename='img/landsat7/result-cluster-linkage-6-average.jpg')}}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3>Complete Linkage</h3></td>
+                    <td><h3>6</h3></td>
+                    <td>
+                        <img class="ui small image" src="{{url_for('static',filename='img/landsat7/result-cluster-linkage-6-complete.jpg')}}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3>Ward Linkage</h3></td>
+                    <td><h3>6</h3></td>
+                    <td>
+                        <img class="ui small image" src="{{url_for('static',filename='img/landsat7/result-cluster-linkage-6-ward.jpg')}}"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="ui container" style="margin-top:16px">
+        <table class="ui fixed table">
+            <thead>
+                <tr>
+                <th><h2>Algoritma</h2></th>
+                <th><h2>Cluster</h2></th>
+                <th><h2>Chart Hasil</h2></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><h3>KMeans</h3></td>
+                    <td><h3>6</h3></td>
+                    <td>
+                        <img class="ui medium image" src="{{url_for('static',filename='img/landsat7/chart-kmeans-6.png')}}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3>Average Linkage</h3></td>
+                    <td><h3>6</h3></td>
+                    <td>
+                        <img class="ui medium image" src="{{url_for('static',filename='img/landsat7/chart-linkage-6.png')}}"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</main>
+
+
+{% endblock %}

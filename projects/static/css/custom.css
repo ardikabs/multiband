@@ -1,0 +1,24 @@
+.card {
+width: 100px !important; }
+
+.card .image {
+background: white !important;
+width: 100px;
+height: 100px; }
+.card .image.icon {
+  text-align: center;
+  line-height: 100px; }
+  .card .image.icon i {
+    display: inline-block;
+    vertical-align: middle; }
+.card .image.portrait img {
+  border-radius: 0 !important;
+  height: 100px !important;
+  width: auto !important;
+  margin: auto; }
+.card .image.landscape img {
+  border-radius: 0 !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
