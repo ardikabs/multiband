@@ -1,6 +1,10 @@
 import cv2
 import os
 import numpy as np
+import matplotlib
+
+# use for non windows
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from sklearn.cluster import AgglomerativeClustering
 
